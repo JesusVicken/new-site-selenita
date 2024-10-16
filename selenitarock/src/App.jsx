@@ -2,7 +2,7 @@
 
 import './App.css'
 
-function App() {
+const App = () => {
 
 
   return (
@@ -12,6 +12,6 @@ function App() {
       </p>
     </>
   )
-}
+};
 
 export default App;
