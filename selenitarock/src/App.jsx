@@ -1,15 +1,13 @@
-
-
-import './App.css'
+import Home  from './pages/Home/Home.jsx'
 
 const App = () => {
 
 
   return (
     <>
-      <p>
-        Site Lio
-      </p>
+
+        <Home />
+      
     </>
   )
 };

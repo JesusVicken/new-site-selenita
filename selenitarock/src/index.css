@@ -1,0 +1,9 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-snap-type: y mandatory;
+    /* Habilita o snap para rolagem suave */
+    overflow-y: scroll;
+}
