@@ -2,19 +2,22 @@ import { Container, styled } from "@mui/material";
 
 const Sobre = () => {
 
-    const StyledSobre = styled("div")(() => ({
-        backgroundColor: "white",
-        height: "100vh",  // Define que a seção ocupa toda a altura da tela
+    const StyledGaleria = styled("div")(() => ({
+        backgroundColor: "#f5f5f5",
+        height: "100vh",  // Ocupa toda a altura da tela
         scrollSnapAlign: "start",  // Ancoragem suave ao rolar
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
     }));
 
     return (
-        <StyledSobre id="sobre">
+        <StyledGaleria id="galeria">
             <Container>
-                <h1>Sobre a banda</h1>
-                {/* Conteúdo sobre a banda */}
+                <h1>Sobre a Banda</h1>
+                <p> da banda.</p>
             </Container>
-        </StyledSobre>
+        </StyledGaleria>
     );
 };
 

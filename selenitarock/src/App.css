@@ -1,0 +1,14 @@
+/* Define o comportamento de rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Configura o snap de rolagem no contêiner principal */
+.scroll-container {
+    scroll-snap-type: y mandatory;
+    /* Aplica o snap vertical */
+    overflow-y: scroll;
+    /* Habilita rolagem vertical */
+    height: 100vh;
+    /* A altura do contêiner é igual à altura da tela */
+}
