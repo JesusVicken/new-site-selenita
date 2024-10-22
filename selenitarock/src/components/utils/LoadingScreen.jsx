@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { styled, IconButton } from "@mui/material";
 import Vinheta from "../../assets/Vinheta.mp4"; // Caminho para o vídeo
-import PlayArrowIcon from "@mui/icons-material/PlayArrow"; // Ícone de play
+import VolumeUpIcon from "@mui/icons-material/VolumeUp"; // Ícone de som
 
 const LoadingScreen = ({ onVideoEnd }) => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -43,7 +43,7 @@ const LoadingScreen = ({ onVideoEnd }) => {
         bottom: "20px",
         right: "20px",
         backgroundColor: "rgba(0, 0, 0, 0.5)", // Fundo transparente para destacar o botão
-        color: "green", // Cor do ícone
+        color: "white", // Cor do ícone
     });
 
     return (
@@ -58,7 +58,7 @@ const LoadingScreen = ({ onVideoEnd }) => {
                     />
                     {isMuted && (
                         <StyledIconButton onClick={handleUnmute}>
-                            <PlayArrowIcon /> {/* Ícone de som */}
+                            <VolumeUpIcon /> {/* Ícone de som */}
                         </StyledIconButton>
                     )}
                 </StyledLoadingScreen>

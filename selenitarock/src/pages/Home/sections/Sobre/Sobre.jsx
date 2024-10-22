@@ -1,26 +1,15 @@
-import { Container, styled } from "@mui/material";
+import { Container } from "@mui/material";
+import BackgroundSection from '../../../../components/BakgroundSection'; // Importe o componente BackgroundSection
 import gbImage from "../../../../assets/bg.jpg"; // Importe a imagem
 
 const Sobre = () => {
-    const StyledSection = styled("section")(() => ({
-        height: "100vh", // Altura da seção
-        scrollSnapAlign: "start", // Ancoragem suave
-        backgroundImage: `url(${gbImage})`, // Define a imagem de fundo
-        backgroundSize: "cover", // Faz a imagem cobrir toda a seção
-        backgroundPosition: "center", // Centraliza a imagem
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        color: "white", // Define a cor do texto para contraste
-    }));
-
     return (
-        <StyledSection id="sobre">
+        <BackgroundSection image={gbImage} bgPosition="left" id="sobre">
             <Container>
                 <h1>Sobre a Banda Selenita</h1>
                 <p>Uma breve descrição da banda...</p>
             </Container>
-        </StyledSection>
+        </BackgroundSection>
     );
 };
 

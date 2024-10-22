@@ -1,7 +1,9 @@
-import { Container, styled, Grid } from "@mui/material";
+import { Container, styled, Grid, useTheme } from "@mui/material";
 import Bg2 from "../../../../assets/divulgacao2.jpg";
 
 const Hero = () => {
+    const theme = useTheme();
+
     const StyledHero = styled("div")(() => ({
         backgroundColor: "#000000",
         height: "100vh",
@@ -9,6 +11,12 @@ const Hero = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+
+        // Responsividade para telas menores
+        [theme.breakpoints.down("md")]: {
+            backgroundSize: "cover",
+            backgroundPosition: "top", // Ajusta a posição para o topo em telas médias e menores
+        },
     }));
 
     const StyledImg2 = styled("img")(() => ({
@@ -17,6 +25,11 @@ const Hero = () => {
         objectFit: "cover",
         marginLeft: "auto",
         marginRight: "auto",
+
+        [theme.breakpoints.down("sm")]: {
+            maxHeight: "50vh", // Reduz a altura da imagem em dispositivos móveis
+            objectFit: "contain", // Ajusta a imagem para ser contida dentro do espaço
+        },
     }));
 
     return (

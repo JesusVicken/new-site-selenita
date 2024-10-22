@@ -1,23 +1,15 @@
-import { Container, styled } from "@mui/material";
+import { Container } from "@mui/material";
+import BackgroundSection from '../../../../components/BakgroundSection'; // Importe o componente BackgroundSection
+import gbImage from "../../../../assets/bg.jpg"; // Importe a imagem
 
 const Discografia = () => {
-
-    const StyledDiscografia = styled("div")(() => ({
-        backgroundColor: "#e0e0e0",
-        height: "100vh",  // Ocupa toda a altura da tela
-        scrollSnapAlign: "start",  // Ancoragem suave ao rolar
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-    }));
-
     return (
-        <StyledDiscografia id="discografia">
+        <BackgroundSection image={gbImage} bgPosition="top" id="discografia">
             <Container>
                 <h1>Discografia</h1>
                 <p>Lista de álbuns e músicas da banda.</p>
             </Container>
-        </StyledDiscografia>
+        </BackgroundSection>
     );
 };
 
