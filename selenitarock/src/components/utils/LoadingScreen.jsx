@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { styled, IconButton } from "@mui/material";
+import { styled, IconButton, Tooltip } from "@mui/material"; // Importe o Tooltip
 import Vinheta from "../../assets/Vinheta.mp4"; // Caminho para o vídeo
-import VolumeUpIcon from "@mui/icons-material/VolumeUp"; // Ícone de som
+import PlayArrowIcon from "@mui/icons-material/PlayArrow"; // Ícone de play
 
 const LoadingScreen = ({ onVideoEnd }) => {
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -43,7 +43,7 @@ const LoadingScreen = ({ onVideoEnd }) => {
         bottom: "20px",
         right: "20px",
         backgroundColor: "rgba(0, 0, 0, 0.5)", // Fundo transparente para destacar o botão
-        color: "white", // Cor do ícone
+        color: "green", // Cor do ícone
     });
 
     return (
@@ -57,9 +57,16 @@ const LoadingScreen = ({ onVideoEnd }) => {
                         onEnded={handleVideoEnd} // Chama quando o vídeo termina
                     />
                     {isMuted && (
-                        <StyledIconButton onClick={handleUnmute}>
-                            <VolumeUpIcon /> {/* Ícone de som */}
-                        </StyledIconButton>
+                        <Tooltip
+                            title="Clique para escutar as músicas da banda!"
+                            arrow
+                            placement="top"
+                            PopperProps={{ disablePortal: true }} // Desabilita o portal
+                        >
+                            <StyledIconButton onClick={handleUnmute}>
+                                <PlayArrowIcon /> {/* Ícone de som */}
+                            </StyledIconButton>
+                        </Tooltip>
                     )}
                 </StyledLoadingScreen>
             )}
